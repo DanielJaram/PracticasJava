@@ -5,15 +5,10 @@ public class TablaMultiplicacion {
 	//5-10=50
 	
 	void imprimir() {
-		for(int i =1; i<=10; i++) {
-			System.out.printf("%d * %d = %d", 5, i , 5*i).println();
-		}
-		
+		imprimir(5);	
 	}
 	void imprimir(int table) {
-		for(int i =1; i<=10; i++) {
-			System.out.printf("%d * %d = %d", table, i , table*i).println();
-		}
+		imprimir(table, 1, 10);
 	}
 	
 	void imprimir(int table, int del, int hasta) {
