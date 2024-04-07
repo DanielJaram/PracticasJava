@@ -71,16 +71,49 @@ public class Exercises {
 	 * 
 	 * The sum of all the three angles must be exactly 180.
 	 */
-	
+
 	public class TriangleValidator {
-	    public boolean isValidTriangle(int angle1, int angle2, int angle3) {
-	        // write your code here
-	        int sum = angle1 + angle2 + angle3;
-	        if(angle1 > 0 && angle2 > 0 && angle3 > 0 && sum == 180){
-	            return true;
-	        }
-	        return false;
-	    }
+		public boolean isValidTriangle(int angle1, int angle2, int angle3) {
+			// write your code here
+			int sum = angle1 + angle2 + angle3;
+			if (angle1 > 0 && angle2 > 0 && angle3 > 0 && sum == 180) {
+				return true;
+			}
+			return false;
+		}
 	}
-	
+
+	/*
+	 * Coding Exercise: Is Right Angled Triangle You have been given a class
+	 * TriangleValidator with an incomplete method isRightAngled(int side1, int
+	 * side2, int side3). This method should take three integer values that
+	 * represent the lengths of the sides of a triangle. Your task is to complete
+	 * the method so it can accurately determine if the triangle with the given
+	 * sides is a right-angled triangle. The method should return true if the
+	 * triangle is right-angled and false otherwise.
+	 * 
+	 * In a right-angled triangle, the square of the length of the hypotenuse (the
+	 * side opposite the right angle) is equal to the sum of the squares of the
+	 * lengths of the other two sides. This is known as the Pythagorean theorem.
+	 * 
+	 * If any side has a non-positive length, it's not considered a valid triangle.
+	 */
+
+	public boolean isRightAngled(int side1, int side2, int side3) {
+		// write your code
+		if (side1 > 0 && side2 > 0 && side3 > 0) {
+			if (side1 * side1 == side3 * side3 + side2 * side2) {
+				return true;
+			}
+			if (side2 * side2 == side1 * side1 + side3 * side3) {
+				return true;
+			}
+			if (side3 * side3 == side2 * side2 + side1 * side1) {
+				return true;
+			}
+
+		}
+		return false;
+	}
+
 }
