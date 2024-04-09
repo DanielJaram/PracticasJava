@@ -116,4 +116,71 @@ public class Exercises {
 		return false;
 	}
 
+	/*
+	 * Coding Exercise: Sum of Squares of First N Numbers You are given an integer
+	 * n. Your task is to implement a method calculateSumOfSquares in the class
+	 * SumOfSquares that calculates and returns the sum of squares of all positive
+	 * integers up to n (inclusive).
+	 * 
+	 * For example, if n = 3, the method should return the sum 1^2 + 2^2 + 3^2 = 14.
+	 * 
+	 * If n is less than 0, the method should return -1.
+	 */
+	public long calculateSumOfSquares2(int n) {
+		// write your code here
+		// si n es menor que 0 devuelve -1 para indicar una entrada no valida
+		if (n < 0) {
+			return -1;
+		}
+		// inicializa la suma a 0
+		long mul = 0;
+		// iterar sobre todos los numeros del 1 al n
+		for (int i = 1; i <= n; i++) {
+			mul += i * i;
+		}
+		// devuelve la suma de cuadrado calculada
+		return mul;
+	}
+
+	/*
+	 * Coding Exercise: Is Leap Year You are given a class LeapYearChecker with a
+	 * method isLeapYear(int year). Your task is to complete the implementation of
+	 * the method to determine if a given year is a leap year.
+	 * 
+	 * The rules are a little tricky. Read them carefully.
+	 * 
+	 * A year is a leap year in the Gregorian calendar if:
+	 * 
+	 * It is divisible by 4 (AND)
+	 * 
+	 * It is NOT divisible by 100 (except when it is divisible by 400)
+	 * 
+	 * Not Divisible by 4 - NOT Leap Year (2041)
+	 * 
+	 * Divisible by 4 and NOT divisible by 100 - Leap Year (2048)
+	 * 
+	 * Divisible by 4 and divisible by 100 - Additional check needed
+	 * 
+	 * Divisible by 4, divisible by 100, divisible by 400 - Leap Year (2000, 2400)
+	 * 
+	 * Divisible by 4, divisible by 100, NOT divisible by 400 - NOT Leap Year (2100,
+	 * 2200, 2300)
+	 */
+	public boolean isLeapYear(int year) {
+		if (year >= 1) {
+			if (year % 4 != 0) {
+				return false;
+			}
+
+			if (year % 100 != 0) {
+				return true;
+			}
+			if (year % 400 != 0) {
+				return false;
+			}
+			return true;
+		}
+		return false;
+	}
+
 }
