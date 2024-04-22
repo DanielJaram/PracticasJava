@@ -8,10 +8,28 @@ public class MotorBikeRunner {
 		ducati.start();
 		honda.start();
 		
-		ducati.velocidad = 100;
-		honda.velocidad = 80;
+		ducati.setVelocidad(100);
 		
-		ducati.velocidad = 20;
-		honda.velocidad = 0;
+		ducati.incrementarVelocidad(100);
+		honda.incrementarVelocidad(100);
+		
+		ducati.disminuirVelocidad(50);
+		honda.disminuirVelocidad(50);
+		
+		
+		//int ducatiVelocidad = ducati.getVelocidad();//get ducati speed
+		//ducatiVelocidad += 100;//increase it by 100
+		//ducati.setVelocidad(ducatiVelocidad);//set it to ducati
+		
+		System.out.println(ducati.getVelocidad());
+		
+		//int hondaVelocidad = honda.getVelocidad();get honda speed
+		//hondaVelocidad += 100;increase it by 100
+		//honda.setVelocidad(hondaVelocidad);set it to honda
+		
+		System.out.println(honda.getVelocidad());
+		//honda.setVelocidad(80);
+		//System.out.println(honda.getVelocidad());
+	
 	}
 }

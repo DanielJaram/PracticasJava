@@ -2,5 +2,23 @@ package oops;
 
 public class Book {
 	
-	int noOfCopies;
-}
+	private int noOfCopies;
+	
+	public int getNoOfCopies() {
+		return noOfCopies;
+	}
+
+	public void setNoOfCopies(int noOfCopies) {
+		this.noOfCopies = noOfCopies;
+	}
+	
+	public void incrementarLibros(int howMuch) {
+		setNoOfCopies(this.noOfCopies + howMuch);
+	}
+	
+	public void disminuirLibros(int howMuch) {
+		setNoOfCopies(this.noOfCopies - howMuch);
+	}
+	
+	}
+
