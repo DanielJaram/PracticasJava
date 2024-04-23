@@ -11,7 +11,9 @@ public class MotorBike {
 	// outputs- void
 	// name- setSpeed
 
-	
+	MotorBike(int velocidad){
+		this.velocidad = velocidad;
+	}
 	void start() {
 		System.out.println("Motocicleta arranco");
 	}

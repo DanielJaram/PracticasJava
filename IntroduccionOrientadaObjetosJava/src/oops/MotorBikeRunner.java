@@ -2,8 +2,11 @@ package oops;
 
 public class MotorBikeRunner {
 	public static void main(String[] args) {
-		MotorBike ducati = new MotorBike();
-		MotorBike honda = new MotorBike();
+		MotorBike ducati = new MotorBike(100);
+		MotorBike honda = new MotorBike(200);
+		
+		System.out.println(ducati.getVelocidad());
+		System.out.println(honda.getVelocidad());
 		
 		ducati.start();
 		honda.start();
