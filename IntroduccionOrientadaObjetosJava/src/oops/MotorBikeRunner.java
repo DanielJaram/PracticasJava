@@ -4,9 +4,11 @@ public class MotorBikeRunner {
 	public static void main(String[] args) {
 		MotorBike ducati = new MotorBike(100);
 		MotorBike honda = new MotorBike(200);
+		MotorBike suzuki = new MotorBike();
 		
 		System.out.println(ducati.getVelocidad());
 		System.out.println(honda.getVelocidad());
+		System.out.println(suzuki.getVelocidad());
 		
 		ducati.start();
 		honda.start();

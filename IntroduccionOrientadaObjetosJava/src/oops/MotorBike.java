@@ -11,6 +11,10 @@ public class MotorBike {
 	// outputs- void
 	// name- setSpeed
 
+	public MotorBike() {
+		this(5);
+	}
+	
 	MotorBike(int velocidad){
 		this.velocidad = velocidad;
 	}
@@ -36,5 +40,4 @@ public class MotorBike {
 			this.velocidad = velocidad;
 		}
 	}
-
 }
