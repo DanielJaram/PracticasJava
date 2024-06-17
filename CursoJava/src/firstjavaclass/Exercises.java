@@ -132,7 +132,7 @@ public class Exercises {
 		if (n < 0) {
 			return -1;
 		}
-		// inicializa la suma a 0
+		// inicializa la suma a 0 para que la variable acumule
 		long mul = 0;
 		// iterar sobre todos los numeros del 1 al n
 		for (int i = 1; i <= n; i++) {
